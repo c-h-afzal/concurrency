@@ -12,6 +12,13 @@ public class InterruptExample {
                     Thread.sleep(1000 * 60 * 60);
                 } catch (InterruptedException ie) {
                     Thread.currentThread().interrupt();
+
+                    System.out.println(Thread.interrupted());
+                    System.out.println(Thread.currentThread().isInterrupted());
+                    Thread.currentThread().interrupt();
+                    System.out.println(Thread.currentThread().isInterrupted());
+                    System.out.println(Thread.interrupted());
+
                     System.out.println("Oh someone woke me up ! ");
                 }
             }
