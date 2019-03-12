@@ -9,6 +9,7 @@ class BlockingQueue<T> {
     int head = 0;
     int tail = 0;
 
+    @SuppressWarnings("unchecked")
     public BlockingQueue(int capacity) {
         // The casting results in a warning
         array = (T[]) new Object[capacity];

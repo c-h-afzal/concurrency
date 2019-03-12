@@ -12,7 +12,7 @@ public class BlockingQueueTest {
 
             public void run() {
                 try {
-                    for (int i = 0; i < 50; i++) {
+                    for (int i = 0; i < 20; i++) {
                         q.enqueue(new Integer(i));
                         System.out.println("enqueued " + i);
                     }
@@ -26,7 +26,7 @@ public class BlockingQueueTest {
 
             public void run() {
                 try {
-                    for (int i = 0; i < 25; i++) {
+                    for (int i = 0; i < 10; i++) {
                         System.out.println("Thread 2 dequeued: " + q.dequeue());
                     }
                 } catch (InterruptedException ie) {
@@ -39,7 +39,7 @@ public class BlockingQueueTest {
 
             public void run() {
                 try {
-                    for (int i = 0; i < 25; i++) {
+                    for (int i = 0; i < 10; i++) {
                         System.out.println("Thread 3 dequeued: " + q.dequeue());
                     }
                 } catch (InterruptedException ie) {
